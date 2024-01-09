@@ -63,7 +63,7 @@ wish("rani")
 wish("subbu")
 wish("lakshmi")
 
-#variable arguments:
+#variable length arguments:
 #def sum(n1,n2):
 #def sum(n1):
 def sum(*n):
@@ -117,11 +117,74 @@ def f1(n1,*s):
         print(i)
 f1(10,20)
 
+#positional variables
+
 def f1(n1,*s):
     print(n1)
     for i in s:
         print(i)
+f1(10)
+
+def f1(n1,*s):
+    print(n1)
+    for i in s:
+        print(i)
+f1(10,20,30,40,50)
+
+def f1(n1,*s):
+    print(n1)
+    for i in s:
+       print(i)
 f1(10,"A",20,"B")
+
+def f1(n1,*s):
+    print(n1)
+    for i in s:
+        print(i)
+f1(10,20,"A","B",30,40)
+
+
+#def f1(*s,n1):
+  #  for i in s:
+ #       print(i)
+ #   print(n1)
+#f1(10,20,30) #invalid
+
+def f1(*s,n1):
+    for i in s:
+        print(i)
+    print(n1)
+f1(10,20,n1=30)
+
+def f1(**s):
+    print(type(s))
+f1()
+
+def f1(**kwargs):
+    for k,v in kwargs.items():
+        print(k,"=",v)
+f1(n1=10,n2=20,n3=30)
+
+def f1(**kwargs):
+    for k,v in kwargs.items():
+        print(k,"=",v)
+f1(rno=100,name="malli",marks=100,sub="python")
+
+def f(arg1,arg2,arg3=4,arg4=8):
+    print(arg1,arg2,arg3,arg4)
+f(3,2)
+f(10,20,arg4=30)
+f(arg4=1,arg1=2,arg2=1)
+#f()
+#f(arg3=10,arg4=20,30,40)
+#f(2,3,arg2=4)
+
+
+        
+
+
+
+
 
 
 
